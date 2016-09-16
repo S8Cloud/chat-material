@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chat Material</title>
+	<link href="https://fonts.googleapis.com/css?family=Exo:400" rel="stylesheet">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"> </script>
+<body>
+	
+	<div class="navbar"></div>
+	<header></header>
+	<div class="container">
+		<div class="chatbox">
+			<div class="statusbar">
+				<div class='statusmain'></div>
+				<div class='peopleColors'></div>
+			</div>
+			<ul id="messages"></ul>
+			<form id="chat" onsubmit="return send()">
+				<input type="text" id="m" placeholder="Enter message here" autofocus autocomplete="off" />
+				<input type="submit" value="SEND">
+			</form>
+		</div>
+
+	</div>
+
+
+	
+</body>
+</html>
