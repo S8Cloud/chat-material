@@ -32,6 +32,11 @@ html, body
 				flex-direction: column;
 			}	
 
+			.frame > .chatbox 
+			{
+				margin: 0;
+			}
+
 
 				.chatbox .statusbar
 				{

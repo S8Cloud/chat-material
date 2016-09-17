@@ -7,6 +7,11 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/client.html');
 });
 
+app.get('/frame', function(req, res){
+	res.sendFile(__dirname + '/frame.html');
+});
+
+
 app.use(express.static('public'));
 
 var usercount = 0;
