@@ -10,6 +10,7 @@ App.uniqueID = null;
 
 App.socket.on('message', function(res)
 {
+	res.msg = res.msg.toHtmlEntities();
 	// console.log(res);
 	document.querySelector("#messages").innerHTML += "<li class='chatmessage' style='background-color:hsl(" + res.color + ")'><span class='nick'>"+ res.nick + " </span><span class='msg'>" + res.msg + "</span><span class='time'>" + res.time + "</span></li>";
 	scroll();
@@ -58,9 +59,9 @@ function changeColor()
 {
 	App.color = getColor();
 	App.socket.emit('updateProfile', 
-		{
-			"nick" : App.nick, 
-			"color" : App.color, 
+	{
+		"nick" : App.nick, 
+		"color" : App.color, 
 			// "uniqueID" : App.uniqueID
 		});
 };
@@ -82,7 +83,7 @@ function send()
 	else
 		App.socket.emit('message', input.value);
 	input.value = "";
-    return false;
+	return false;
 };
 
 function onConnect() 
@@ -96,4 +97,10 @@ function onConnect()
 	onConnect();
 	// simulate();
 })();
-	
+
+
+String.prototype.toHtmlEntities = function() {
+    return this.replace(/./gm, function(s) {
+        return "&#" + s.charCodeAt(0) + ";";
+    });
+};
