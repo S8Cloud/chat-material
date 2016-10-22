@@ -3,11 +3,8 @@ Simple Node.js + Socket.io chatroom with Materialish design
 
 Check out the demo here [gach.space/chat/](http://gach.space/chat/)
 
-
 #### UPDATE 1:
 - Added [gach.space/chat/frame](http://gach.space/chat/frame) for iframe embedding functionality
-
----
 
 ## Basic functionality
 - Send and receive messages.
@@ -19,6 +16,38 @@ Check out the demo here [gach.space/chat/](http://gach.space/chat/)
 - Node.JS
 - Socket.io
 - Express
+
+---
+## How to install chat-material
+Download repo
+```
+git clone https://github.com/georgegach/chat-material.git
+```
+Install NodeJS and NPM 
+```
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
+Install chat-material dependencies
+```
+cd chat-material/
+npm install
+```
+then just type
+```
+nodejs server.js
+```
+or if you want to run it forever 
+```
+sudo npm install forever -g
+sudo apt-get install nodejs-legacy 
+forever start server.js
+```
+you can list currently running forever daemons from 
+```
+forever list
+```
+---
 
 ### App screenshot
 ![screenshot](https://raw.githubusercontent.com/georgegach/chat-material/master/res/screenshot.JPG)
