@@ -1,10 +1,10 @@
 # chat-material
 Simple Node.js + Socket.io chatroom with Materialish design
 
-Check out the demo here [gach.space/chat/](http://gach.space/chat/)
+Check out the demo here [chat.gach.space](http://chat.gach.space)
 
 #### UPDATE 1:
-- Added [gach.space/chat/frame](http://gach.space/chat/frame) for iframe embedding functionality
+- Added [chat.gach.space/frame](http://chat.gach.space/frame) for iframe embedding functionality
 
 ## Basic functionality
 - Send and receive messages.
