@@ -1,11 +1,6 @@
 # chat-material
 Simple Node.js + Socket.io chatroom with Materialish design
 
-Check out the demo here [chat.gach.space](http://chat.gach.space)
-
-#### UPDATE 1:
-- Added [chat.gach.space/frame](http://chat.gach.space/frame) for iframe embedding functionality
-
 ## Basic functionality
 - Send and receive messages.
 - Randomly generated beautiful colors for every participant. (120 different combinations)
@@ -25,8 +20,12 @@ git clone https://github.com/georgegach/chat-material.git
 ```
 Install NodeJS and NPM 
 ```
-sudo apt-get install nodejs
-sudo apt-get install npm
+curl -sL https://deb.nodesource.com/setup_8.x | bash -  
+apt-get install nodejs -y
+sudo npm i npm -g
+sudo npm install express -g
+sudo npm install socket.io -g
+sudo npm install pm2 -g
 ```
 Install chat-material dependencies
 ```
@@ -35,19 +34,6 @@ npm install
 ```
 then just type
 ```
-nodejs server.js
+pm2 start server.js -i 0 --name "chat-material"
 ```
-or if you want to run it forever 
-```
-sudo npm install forever -g
-sudo apt-get install nodejs-legacy 
-forever start server.js
-```
-you can list currently running forever daemons from 
-```
-forever list
-```
----
-
-### App screenshot
-![screenshot](https://raw.githubusercontent.com/georgegach/chat-material/master/res/screenshot.JPG)
+**Default Listening Port `3180`**
