@@ -1,9 +1,9 @@
 {
   "name": "chat-material",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple chat app using NodeJS, Socket.io and Express",
   "dependencies": {
-    "express": "~4.10.2",
-    "socket.io": "~1.4.8"
+    "express": "~4.16.2",
+    "socket.io": "~2.0.4"
   }
 }
