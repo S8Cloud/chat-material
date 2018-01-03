@@ -16,16 +16,16 @@ Simple Node.js + Socket.io chatroom with Materialish design
 ## How to install chat-material
 Download repo
 ```
-git clone https://github.com/georgegach/chat-material.git
+git clone https://github.com/S8Cloud/chat-material.git
 ```
 Install NodeJS and NPM 
 ```
 curl -sL https://deb.nodesource.com/setup_8.x | bash -  
-apt-get install nodejs -y
+apt-get install nodejs sudo -y
 sudo npm i npm -g
-sudo npm install express -g
-sudo npm install socket.io -g
-sudo npm install pm2 -g
+sudo npm i express -g
+sudo npm i socket.io -g
+sudo npm i pm2 -g
 ```
 Install chat-material dependencies
 ```
