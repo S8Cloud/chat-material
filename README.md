@@ -11,6 +11,7 @@ Simple Node.js + Socket.io chatroom with Materialish design
 - Node.JS
 - Socket.io
 - Express
+- Debian 9.3 amd64
 
 ---
 ## How to install chat-material
@@ -18,7 +19,7 @@ Download repo
 ```
 git clone https://github.com/S8Cloud/chat-material.git
 ```
-Install NodeJS and NPM 
+Install NodeJS and some NPM package necessary.
 ```
 curl -sL https://deb.nodesource.com/setup_8.x | bash -  
 apt-get install nodejs sudo -y
@@ -27,13 +28,15 @@ sudo npm i express -g
 sudo npm i socket.io -g
 sudo npm i pm2 -g
 ```
-Install chat-material dependencies
+Install chat-material dependencies.
 ```
 cd chat-material/
-npm install
+sudo npm install
 ```
-then just type
+Then just use pm2 to automatically run chat-material.
 ```
-pm2 start server.js -i 0 --name "chat-material"
+sudo pm2 start server.js -i 0 --name "chat-material"
+sudo pm2 startup
+sudo pm2 save
 ```
 **Default Listening Port `3180`**
