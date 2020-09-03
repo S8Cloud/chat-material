@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Simple chat app using NodeJS, Socket.io and Express",
   "dependencies": {
-    "express": "~4.16.2",
-    "socket.io": "~2.0.4"
+    "express": "~4.17.1",
+    "socket.io": "~2.3.0"
   }
 }
